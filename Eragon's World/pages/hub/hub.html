@@ -12,7 +12,7 @@
     <link href="/pages/hub/hub.css" rel="stylesheet" />
     <script src="/js/data.js"></script>
     <script src="/pages/hub/hub.js"></script>
-    <script type="text/javascript">
+   <script type="text/javascript">
     // Takes a photo using the default JPEG format.
     function takepicture() {
         var captureUI = new Windows.Media.Capture.CameraCaptureUI();
@@ -25,6 +25,29 @@
             }
         });
    }
+    </script>
+    <script type="text/javascript">
+        function values() {
+            var api = {
+                url: "http://jsonplaceholder.typicode.com/posts/1/comments",
+                type: "GET"
+            }
+            console.log("HERE");
+            
+            WinJS.xhr(api).done(
+             function success(req) {
+                 var json = JSON.parse(req.responseText);
+                 var out = "<tr><td>Message</td><td>By</td></tr>";
+                 for (var i = 0; i < json.lenght; i++) {
+                     out += "<tr><td>" + json[i].body + "</td><td>" + json[i].email + "</td></tr>";
+                 }
+                 document.getElementById("xhr").innerHTML = "Datas worlds";
+                 document.getElementById("out").innerHTML = out;
+             }
+          )
+            document.getElementById("xhr").innerHTML = "Datas worlds";
+            document.getElementById("out").innerHTML = out;
+        };
     </script>
 </head>
 <body data-win-control="WinJS.UI.Hub">
@@ -79,15 +102,15 @@
                 </div>
 
                 <div class="section3" data-win-control="WinJS.UI.HubSection" data-win-options="{ isHeaderStatic: true }" data-win-res="{ winControl: {'header': 'Section3'} }">
-                    <div class="item-title win-type-medium" data-win-res="{ textContent: 'Section2ItemTitle' }"></div>
-                    <div class="article-header win-type-x-large" data-win-res="{ textContent: 'Section2Subtext' }"></div>
-                    <div class="win-type-xx-small" data-win-res="{ textContent: 'Section2Description' }"></div>
+                    <div class="item-title win-type-medium" data-win-res="{ textContent: 'Section3ItemTitle' }"></div>
+                    <div class="article-header win-type-x-large" data-win-res="{ textContent: 'Section3Subtext' }"></div>
+                    <div class="win-type-xx-small" data-win-res="{ textContent: 'Section3Description' }"></div>
                     <div class="win-type-small">
-                        <!--<div id="xhr">
+                        <div id="xhr">
                             No Data Yet
                         </div>
-                        <span>Get magic happens</span><input id="getmagic" type="button" onclick="OnGetClick()" value="Get"></input>
-                        <table id="out"></table> -->
+                        <span>Get magic happens</span><input id="getmagic" type="button" onclick="values()" value="Get"></input>
+                        <table id="out"></table> 
                     </div>
                 </div>
 

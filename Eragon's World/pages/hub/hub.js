@@ -8,30 +8,7 @@
     // Get the groups used by the data-bound sections of the Hub.
     var section3Group = Data.resolveGroupReference("group4");
     var section3Items = Data.getItemsFromGroup(section3Group);
-    /*
-    var getMagic = util.id("getMagic");
-    console.log(getMagic);
 
-    getMagic.addEventListener("click", OnGetClick, false);
-    */
-    /*
-    function OnGetClick(yet) {
-       var api = {
-            url: "http://jsonplaceholder.typicode.com/posts/1/comments",
-            type: "GET"
-        }
-       WinJS.xhr(options).done(
-            function success(req) {
-                var json = JSON.parse(req.responseText);
-                var out = "<tr><td>Message</td><td>By</td></tr>";
-                for (var i = 0; i < json.lenght; i++) {
-                    out += "<tr><td>" + json[i].body + "</td><td>" + json[i].email + "</td></tr>";
-                }
-                u.getElementById("out").innerHTML = out;
-            }
-            )
-    }
-    /**/
     WinJS.Namespace.define("SearchUtils",
     {
         S_navigate: WinJS.UI.eventHandler(S_navigate)
