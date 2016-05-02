@@ -1,0 +1,28 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "Section1": "World",
+    "Section1Subtext": "Discover the World of dragon's",
+    "Section1Description": "Have fun exploring Alagaësia",
+	"Section1Crete": "Montain where Eragon's will acquire The Eggs :)",
+	"Section1Forest": "Place of the elves",
+	"Section1Nain": "Nain's headquarters",
+
+    "Section2": "Your Head",
+    "Section2ItemTitle": "Face :)",
+    "Section2ItemSubtitle": "",
+    "Section2Subtext": "",
+    "Section2Description": "We would like you to show us your face. Could you help us ?",
+    
+    "Section3": "Crazy Scales",
+    "Section3ItemTitle": "Latin Here",
+    "Section3ItemSubtitle": "",
+    "Section3Subtext": "",
+    "Section3Description": "Just have fun .... I'm an API /)",
+    
+    "Section4": "Section 4",
+    "Section4Description": "Lorem ipsum dolor sit amet, consectetur ising elit, sed diam nonummy nibh uismod tincidunt ut laoreet suscipit lobortis nisl ut wisi quipexerci quis consequat minim veniam, quis nostrud. exerci tation ullam corper.",
+
+    "DescriptionText": "Description text:",
+    "SectionSubtitle": "Section subtitle"
+}

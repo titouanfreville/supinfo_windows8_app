@@ -1,0 +1,25 @@
+﻿<!doctype HTML>
+<html>
+<head>
+    <title>App defaults Settings flyout</title>
+</head>
+<body>
+    <!-- BEGINTEMPLATE: Template code for an empty Help Flyout. -->
+    <!-- Each Settings flyout should be defined in its own HTML file. -->
+    <!-- Set the width to 'narrow' (346px) or 'wide' (646px). -->
+    <!-- Set the background color for the header to the background color defined for your
+         app tile in the manifest. -->
+    <div id="defaultsDiv" data-win-control="WinJS.UI.SettingsFlyout" aria-label="App defaults Settings flyout"
+         data-win-options="{settingsCommandId:'help',width:'narrow'}">
+        <div class="win-header" style="background-color:#464646">
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+            <div class="win-label">Defaults</div>
+            <img src="ms-appx:///images/smalllogo.png" style="position: absolute; right: 40px;" />
+        </div>
+        <div class="win-content">
+            {App defaults content goes here}
+        </div>
+    </div>
+    <!-- ENDTEMPLATE -->
+</body>
+</html>
