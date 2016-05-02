@@ -32,21 +32,24 @@
                 url: "http://jsonplaceholder.typicode.com/posts/1/comments",
                 type: "GET"
             }
-            console.log("HERE");
             
             WinJS.xhr(api).done(
              function success(req) {
                  var json = JSON.parse(req.responseText);
                  var out = "<tr><td>Message</td><td>By</td></tr>";
-                 for (var i = 0; i < json.lenght; i++) {
+                 console.log("In success");
+                 console.log(json);
+                 for (var i = 0; i < json.length; i++) {
                      out += "<tr><td>" + json[i].body + "</td><td>" + json[i].email + "</td></tr>";
+                     console.log("Step");
+                     console.log(i);
+                     console.log("out");
                  }
                  document.getElementById("xhr").innerHTML = "Datas worlds";
                  document.getElementById("out").innerHTML = out;
              }
+
           )
-            document.getElementById("xhr").innerHTML = "Datas worlds";
-            document.getElementById("out").innerHTML = out;
         };
     </script>
 </head>
@@ -110,7 +113,7 @@
                             No Data Yet
                         </div>
                         <span>Get magic happens</span><input id="getmagic" type="button" onclick="values()" value="Get"></input>
-                        <table id="out"></table> 
+                        <table id="out" style="max-width: 30%"></table> 
                     </div>
                 </div>
 
